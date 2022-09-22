@@ -4,6 +4,10 @@ torchvision==0.12.0
 pytorch-lightning==1.7.1
 torchmetrics==0.9.3
 timm
+dvc
+dvc_gdrive
+protobuf==3.20.*
+
 
 # --------- hydra --------- #
 hydra-core==1.2.0
