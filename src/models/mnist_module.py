@@ -104,7 +104,8 @@ class MNISTLitModule(LightningModule):
         # log `val_acc_best` as a value through `.compute()` method, instead of as a metric object
         # otherwise metric would be reset by lightning after each epoch
         self.log("val/acc_best", self.val_acc_best.compute(), prog_bar=True)
-
+        res = self.val_acc_best.compute()
+        self.log("hp_metric", res)
 
     def test_step(self, batch: Any, batch_idx: int):
         loss, preds, targets = self.step(batch)

@@ -123,6 +123,7 @@ def main(cfg: DictConfig) -> Optional[float]:
     metric_value = utils.get_metric_value(
         metric_dict=metric_dict, metric_name=cfg.get("optimized_metric")
     )
+    print("Returning metric value: ", metric_value)
 
     # return optimized metric
     return metric_value
